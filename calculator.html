@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        function clearScreen() {
+            document.getElementById("input").value = "";
+        }
+        
+        
+        function display(value) {
+            document.getElementById("input").value += value;
+        }
+        
+        
+        function calculate() {
+            var p = document.getElementById("input").value;
+            var q = eval(p);
+            document.getElementById("input").value = q;
+        }
+    </script>
+    <style>
+        .b1{
+            width: 100px;
+            font-size: large;
+        }
+        
+        .inp{
+            width: 250px;
+        }
+        .b4{
+            width: 40px;
+            font-size: large;
+           }
+        .border,.border1{
+            border: none;
+            
+        }
+        .border1{
+            background-color: rgb(184, 183, 183);
+        }
+        .border{
+            background-color: rgb(216, 216, 216);
+        }
+        
+        .bckl{
+            height: 80px;
+        }
+        .input{
+            background-color: darkgray;
+        }
+        
+    </style>
+</head>
+<body>
+    <center>
+        <table height="100px" width="100px" border="2" cellspacing="0" cellpadding="10">
+                <tr>
+                    <td class="input" colspan="4"><input type="text" class="inp" dir="rtl" align="right" id="input" disabled ></td>
+                </tr>
+                
+          
+            <tr>
+                <td class="border1" colspan="2"><button class="b1" align="center" value="c" onclick="clearScreen()">c</button></td>
+                
+                <td class="border1"><button class="b4" align="center" value="%" onclick="display('%')">%</button></td>
+                <td class="border1"><button class="b4" align="center" value="/" onclick="display('/')">/</button></td>
+            </tr>
+            <tr>
+                <td class="border"><button class="b4" align="center" value="7" onclick="display('7')">7</button></td>
+                <td class="border"><button class="b4" align="center" value="8" onclick="display('8')">8</button></td>
+                <td class="border"><button class="b4" align="center" value="9" onclick="display('9')">9</button></td>
+                <td class="border1"><button class="b4" align="center" value="*" onclick="display('*')">*</button></td>
+                </tr>
+            
+                <tr>
+                    <td class="border"><button class="b4" align="center" value="4" onclick="display('4')">4</button></td>
+                    <td class="border"><button class="b4" align="center" value="5" onclick="display('5')">5</button></td>
+                    <td class="border"><button class="b4" align="center" value="6" onclick="display('6')">6</button></td>
+                    <td class="border1"><button class="b4" align="center" value="-" onclick="display('-')">-</button></td>
+                    </tr>
+                
+                    <tr>
+                        <td class="border"><button class="b4" align="center" value="1" onclick="display('1')">1</button></td>
+                        <td class="border"><button class="b4" align="center" value="2" onclick="display('2')">2</button></td>
+                        <td class="border"><button class="b4" align="center" value="3" onclick="display('3')">3</button></td>
+                        <td class="border1" rowspan="2" ><button class="bckl" align="center" value="ent" onclick="calculate()">Enter</button></td>
+                        </tr>
+                <tr>
+                <td class="border"><button class="b4" align="center" value="." onclick="display('.')">.</button></td>
+                <td class="border"><button class="b4" align="center" value="0" onclick="display('0')">0</button></td>
+                <td class="border"><button class="b4" align="center" value="+" onclick="display('+')">+</button></td>
+                
+            </tr>
+        
+        </table>
+    </center>
+ 
+</body>
+</html>
